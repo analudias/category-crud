@@ -3,21 +3,31 @@ package com.purplepizza.categorycrud.entities;
 import java.io.Serializable;
 import java.time.Instant;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_category")
 public class Category implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private Instant createdAT;
+	private Instant createdAt;
 	
 	public Category() {
 	}
 
-	public Category(Long id, String name, Instant createdAT) {
+	public Category(Long id, String name, Instant createdAt) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.createdAT = createdAT;
+		this.createdAt = createdAt;
 	}
 
 	public Long getId() {
@@ -37,11 +47,11 @@ public class Category implements Serializable {
 	}
 
 	public Instant getCreatedAT() {
-		return createdAT;
+		return createdAt;
 	}
 
-	public void setCreatedAT(Instant createdAT) {
-		this.createdAT = createdAT;
+	public void setCreatedAT(Instant createdAt) {
+		this.createdAt = createdAt;
 	}
 
 	@Override
