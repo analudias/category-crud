@@ -46,11 +46,11 @@ public class Category implements Serializable {
 		this.name = name;
 	}
 
-	public Instant getCreatedAT() {
+	public Instant getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAT(Instant createdAt) {
+	public void setCreatedAt(Instant createdAt) {
 		this.createdAt = createdAt;
 	}
 
