@@ -18,7 +18,6 @@ public class CategoryDTO implements Serializable {
 	public CategoryDTO(Long id, String name, Instant createdAt) {
 		this.id = id;
 		this.name = name;
-		this.createdAt = createdAt;
 	}
 
 	public CategoryDTO(Category entity) {
@@ -42,10 +41,12 @@ public class CategoryDTO implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
 	public Instant getCreatedAt() {
 		return createdAt;
 	}
-	
 
+	public void setCreatedAt(Instant createdAt) {
+		this.createdAt = createdAt;
+	}
 }
