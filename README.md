@@ -1,4 +1,4 @@
-# CRUD de categorias
+# CRUD de Categorias
 
 Fazendo um CRUD por semana até eu me sentir confiante que sei fazer CRUDs
 
